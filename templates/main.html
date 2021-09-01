@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name='viewport' content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+        <title>HR Analysis </title>
+      </head>
+<body>
+<div class="header" id="myHeader">
+  <header>
+    <h2>HR Promotion Prediction</h2>
+ </header>
+</div>
+
+<div class="container">
+<form action="{{ url_for('predict')}}" method="post">
+    <label for="age" class="labelmain">Employee Data</label>
+    <br><br>
+    <label for='avg_training_score' >Avg Training Score </label>
+    <input type="text" name='avg_training_score' placeholder='Avg Training Score Employee' required="required" class="labelage"><br><br>
+    <div class="divnotes"> 
+      <p class="noteslabel">Avg Training Score :</p>
+      <p class="notes">(1) score 20 - 30, (2) nilai 30 - 40, (3) nilai 40 - 50, (4) nilai 50 - 60, (5) nilai 60 - 70, (6) nilai 70 - 80, (7) nilai 80 - 90, (8) nilai 90 - 100</p>
+    </div>
+
+
+    <label for="fname">Age Employee </label>
+    <input type="text" name='age' placeholder='Age Employee' required="required" class="labeljob"><br><br> 
+    <div class="divnotes"> 
+      <p class="noteslabel">Age Employee :</p>
+      <p class="notes">(1) Age 19 - 25, (2) Age 25 - 30, (3) Age 30 - 35, (4) Age 35 - 40, (5) Age 40 - 45 , (6) Age 45 - 50, (7) Age 50 - 55,  (8) Age 55 - 60</p>
+    </div>
+
+    <label for="fname">Length of service </label>
+    <input type="text" name='length_of_service' placeholder='length of service employee' required="required" class="labelmar"><br><br>
+    <div class="divnotes">
+       <p class="noteslabel">Length of service :</p>
+       <p class="notes">(1) 0 - 5 Years, (2) 5 - 10 Years, (3) 10 - 15 Years, (4) 15 - 20 Years, (5) 20 - 25 Years, (6) 25 - 30 Years, (7) 30 - 35 Years,  (8) 35 - 40 Years</p>
+    </div> 
+    
+
+
+    <label for="lname">Department </label>
+    <input type="text" name='department' placeholder='Department Employee' required="required" class="labeledu"><br><br>
+    <div class="divnotes">
+      <p class="noteslabel">Department :</p>
+      <p class="notes">(0) Legal, (1) HR, (2) Sales & Marketing, (3) R&D, (4) Finance, (5) Operations, (6) Analytics , (7) Procurement, (8) Technology </p>
+    </div>
+
+    <label for="fname">Previous year rating </label>
+    <input type="text" name='previous_year_rating' placeholder='Previous year rating employee' required="required" class="labelrat"><br><br>
+    <div class="divnotes">
+      <p class="noteslabel">Previous year rating :</p>
+      <p class="notes">(1) rating 0, (2) rating 0.0 - 1.0, (3) rating 1.0 - 2.0, (4) rating 2.0 - 3.0, (5) rating 3.0 - 4.0, (6) rating 4.0 - 5.0 </p>
+    </div>
+
+    <label for="lname">KPIs met > 80%</label>
+    <input type="text" name='KPIs_met >80%' placeholder='KPIs employee met > 80% ?' required="required" class="labeldef"><br><br>
+    <div class="divnotes">
+      <p class="noteslabel">KPIs met > 80%</p>
+      <p class="notes">(0) No, (1) yes </p>
+    </div>
+
+    <label for="fname">Recruitment Channel </label>
+    <input type="text" name='recruitment_channel' placeholder='Recruitment Channel Employee' required="required" class="labelloan"><br><br>
+    <div class="divnotes">
+      <p class="noteslabel">Recruitment Channel :</p>
+      <p class="notes">(0) other, (1) sourcing, (2) referred</p>
+    </div>
+
+
+    <label for="lname">Awards won ? </label>
+    <input type="text" name='awards_won?' placeholder='Has Employee won awards ?' required="required" class="labelcon"><br><br>
+    <div class="divnotes">
+      <p class="noteslabel">Awards won :</p>
+      <p class="notes">(0) no, (1) yes</p>
+    </div>
+
+    <label for="fname">No of Trainings </label>
+    <input type="text" name='no_of_trainings' placeholder='No of trainings Employee' required="required" class="labelmon"><br><br>
+    <div class="divnotes">
+      <p class="noteslabel">No of Trainings :</p>
+      <p class="notes">1,  2,  3,  4,  5, 6, 7, 8, 9, 10</p>
+    </div>
+
+    <label for="lname">Gender </label>
+    <input type="text" name='gender' placeholder='Gender Employee' required="required" class="labelday"><br><br>
+    <div class="divnotes">
+      <p class="noteslabel">Gender Employee :</p>
+      <p class="notes">(0) Male, (1) Female  </p>
+    </div>
+
+    <label for="fname">Education </label>
+    <input type="text" name='education' placeholder='Education Employee' required="required" class="labelcam"><br><br>
+    <div class="divnotes">
+      <p class="noteslabel">Education Employee :</p>
+      <p class="notes">(0) Unknown, (1) Bachelor's, (2) Below Secondary,  (3) Master's & above </p>
+    </div>
+
+    <label for="lname">Region 2</label>
+    <input type="text" name='region_region_2' placeholder='Employee work in region 2' required="required" class="labelp"><br><br>
+    <div class="divnotes">
+      <p class="noteslabel">region 2 :</p>
+      <p class="notes">(0) No, (1) Yes</p>
+    </div>
+
+    <button type="submit" class="button">Predict</button>
+  </form>
+  <br><br>
+  <br><br>
+  
+  <div class="divpred">
+    <h4>Employee Promotion Decision :</h4>
+    <br><br>
+    <h4 class="pred">{{ prediction_text }}</h4>
+  </div>
+
+</div>
+<script>
+  window.onscroll = function() {myFunction()};
+  
+  var header = document.getElementById("myHeader");
+  var sticky = header.offsetTop;
+  
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+
+  </script> 
+</body>
+
+</html> 

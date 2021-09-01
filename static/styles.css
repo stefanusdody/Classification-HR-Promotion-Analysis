@@ -1,0 +1,263 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ /* Style the header */
+ .header {
+    padding: 20px;
+    background:rgb(4, 46, 124);
+    color:white;
+  }
+  
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the header with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 102px;
+  } 
+
+.container {
+    background-color:#ffffff;
+    font-family: sans-serif;
+    font-size: 1em;
+    color:black;
+    margin-left: 30%;
+    margin-top: 5%;
+    justify-content: center;
+    margin-bottom: 20%;
+}
+
+input{
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 10%;
+    width: 250px;
+    height: 30px;
+    text-align: center;
+}
+
+
+
+.divnotes {
+    background-color: lightgrey;
+    width: 650px;
+    border: 3px solid grey;
+    padding: 4px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.noteslabel {
+    font-size: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+.notes {
+    width: 630px;
+    text-align: left;
+    font-size: 10px;
+}
+
+.button {
+    margin-top: 5%;
+    width: 690px;
+    height: 50px;
+    font-size: 25px;
+}
+
+.divpred {
+    background-color: lightgrey;
+    width: 650px;
+    height: 150px;
+    border: 3px solid grey;
+    padding: 4px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.pred {
+    width: 650px;
+}
+
+.labelmain {
+  font-weight: bold;
+}
+
+.labelage {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 32%;
+    width: 250px;
+}
+
+.labeljob {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 35%;
+    width: 250px;
+}
+
+.labelmar {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 33%;
+    width: 250px;
+}
+
+.labeledu {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 38%;
+    width: 250px;
+}
+
+.labelrat {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 31.5%;
+    width: 250px;
+}
+
+.labeldef {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 34.5%;
+    width: 250px;
+}
+
+.labelloan {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 30%;
+    width: 250px;
+}
+
+.labelcon {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 36%;
+    width: 250px;
+}
+
+.labelmon {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 35%;
+    width: 250px;
+}
+
+.labelday {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 41%;
+    width: 250px;
+}
+
+.labelcam {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 39%;
+    width: 250px;
+}
+
+.labelp {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 40%;
+    width: 250px;
+}
+
+.labelprev {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 25.5%;
+    width: 250px;
+}
+
+.labelpout {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 24.5%;
+    width: 250px;
+}
+
+.labelcons {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 14%;
+    width: 250px;
+}
+
+.labelconf {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 9%;
+    width: 250px;
+}
+
+.labeleur {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 16%;
+    width: 250px;
+}
+
+.labelnum {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: black;
+    border-radius: 5px;
+    margin-left: 14%;
+    width: 250px;
+}
+  
